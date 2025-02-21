@@ -1,0 +1,16 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "style.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "Ahmed_Ezzat",
+      "timestamp": "2025-01-29T20:02:01Z"
+    },
+    "lastModificationSignature": "09d47d19ae6c50212731b54d5362b87c322052cec867c60503d0afbd0608a5d2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "pages": {
+    "/": {
+      "viewPath": "Main view/overview"
+    },
+    "/history": {
+      "viewPath": "Main view/History"
+    },
+    "/station_details/:station_num": {
+      "title": "",
+      "viewPath": "station_details/stayion detials"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 75,
+        "viewParams": {},
+        "viewPath": "navigation/top_nav"
+      }
+    ]
+  }
+}

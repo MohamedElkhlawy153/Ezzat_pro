@@ -1,0 +1,147 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "station_1",
+          "tooltip": {
+            "style": {
+              "key": "0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19)"
+            }
+          }
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "props": {
+          "path": "objects/station",
+          "style": {
+            "borderBottomColor": "#00000026",
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderBottomStyle": "solid",
+            "borderBottomWidth": 0,
+            "borderRightColor": "#0000002B",
+            "borderRightStyle": "solid",
+            "borderRightWidth": 0,
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderTopStyle": "none",
+            "marginBottom": 15,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "marginTop": 15,
+            "outlineColor": "#00000024",
+            "outlineStyle": "solid",
+            "outlineWidth": "10",
+            "paddingLeft": 10,
+            "paddingRight": 10
+          },
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "station2",
+          "tooltip": {
+            "style": {
+              "key": "0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19)"
+            }
+          }
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "props": {
+          "params": {
+            "Station_num": 2
+          },
+          "path": "objects/station",
+          "style": {
+            "borderBottomColor": "#00000026",
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderBottomStyle": "solid",
+            "borderBottomWidth": 0,
+            "borderRightColor": "#0000002B",
+            "borderRightStyle": "solid",
+            "borderRightWidth": 0,
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderTopStyle": "none",
+            "marginBottom": 15,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "marginTop": 15,
+            "outlineColor": "#00000024",
+            "outlineStyle": "solid",
+            "outlineWidth": "10",
+            "paddingLeft": 10,
+            "paddingRight": 10
+          },
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "station_3",
+          "tooltip": {
+            "style": {
+              "key": "0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19)"
+            }
+          }
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "props": {
+          "params": {
+            "Station_num": 3
+          },
+          "path": "objects/station",
+          "style": {
+            "borderBottomColor": "#00000026",
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderBottomStyle": "solid",
+            "borderBottomWidth": 0,
+            "borderRightColor": "#0000002B",
+            "borderRightStyle": "solid",
+            "borderRightWidth": 0,
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderTopStyle": "none",
+            "marginBottom": 15,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "marginTop": 15,
+            "outlineColor": "#00000024",
+            "outlineStyle": "solid",
+            "outlineWidth": "10",
+            "paddingLeft": 10,
+            "paddingRight": 10
+          },
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "direction": "row-reverse",
+      "justify": "center",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

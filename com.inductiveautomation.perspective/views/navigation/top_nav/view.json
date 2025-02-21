@@ -1,0 +1,94 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 75
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "HorizontalMenu"
+        },
+        "position": {
+          "basis": "46px",
+          "grow": 1
+        },
+        "props": {
+          "items": [
+            {
+              "enabled": true,
+              "icon": {
+                "path": "material/home"
+              },
+              "label": "overview",
+              "style": {
+                "classes": ""
+              },
+              "target": "/"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "color": "",
+                "path": "material/trending_up"
+              },
+              "items": [],
+              "label": "HISTORY",
+              "style": {
+                "classes": ""
+              },
+              "target": "/history"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": "sample-components/chart-chartRangeSelector"
+              },
+              "items": [],
+              "label": "station1",
+              "style": {
+                "classes": ""
+              },
+              "target": "/station_details/1"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": "sample-components/chart-chartRangeSelector"
+              },
+              "items": [],
+              "label": "station2",
+              "style": {
+                "classes": ""
+              },
+              "target": "/station_details/2"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": "sample-components/chart-chartRangeSelector"
+              },
+              "items": [],
+              "label": "station3",
+              "style": {
+                "classes": ""
+              },
+              "target": "/station_details/3"
+            }
+          ]
+        },
+        "type": "ia.navigation.horizontalmenu"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

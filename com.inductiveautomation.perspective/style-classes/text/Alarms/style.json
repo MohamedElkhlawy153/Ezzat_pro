@@ -1,0 +1,11 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "#FF8A8A",
+      "color": "#FF0000",
+      "fontSize": "25px",
+      "fontWeight": "bold",
+      "textAlign": "center"
+    }
+  }
+}

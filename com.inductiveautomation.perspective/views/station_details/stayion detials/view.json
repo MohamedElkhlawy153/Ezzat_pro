@@ -1,0 +1,319 @@
+{
+  "custom": {},
+  "params": {
+    "station_num": 1
+  },
+  "propConfig": {
+    "params.station_num": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Vessel"
+                },
+                "position": {
+                  "basis": "292px"
+                },
+                "propConfig": {
+                  "props.value.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "station_num": "{view.params.station_num}"
+                        },
+                        "tagPath": "[Simulator_tags_provider]Station_{station_num}/tank_capacity"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "location": "top",
+                    "style": {
+                      "classes": "text/title"
+                    }
+                  },
+                  "value": {
+                    "style": {
+                      "classes": "text/Data"
+                    }
+                  }
+                },
+                "type": "ia.symbol.vessel"
+              },
+              {
+                "meta": {
+                  "name": "FlexRepeater"
+                },
+                "position": {
+                  "basis": "320px"
+                },
+                "propConfig": {
+                  "props.instances[0].value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "station_num": "{view.params.station_num}"
+                        },
+                        "tagPath": "[Simulator_tags_provider]Station_{station_num}/ph"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.instances[1].value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "station_num": "{view.params.station_num}"
+                        },
+                        "tagPath": "[Simulator_tags_provider]Station_{station_num}/viscosity"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.instances[2].value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "station_num": "{view.params.station_num}"
+                        },
+                        "tagPath": "[Simulator_tags_provider]Station_{station_num}/temperature"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column",
+                  "instances": [
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "name": "ph",
+                      "unit": ""
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "name": "viscosity",
+                      "unit": "pa-s"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "name": "temperature",
+                      "unit": "fْ "
+                    }
+                  ],
+                  "path": "objects/data card",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              }
+            ],
+            "meta": {
+              "name": "vessel_Container"
+            },
+            "position": {
+              "basis": "315px"
+            },
+            "props": {
+              "direction": "column",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Pump"
+                },
+                "position": {
+                  "basis": "180px"
+                },
+                "propConfig": {
+                  "props.value.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "station_num": "{view.params.station_num}"
+                        },
+                        "tagPath": "[Simulator_tags_provider]Station_{station_num}/pump_fault"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": false,
+                              "output": "Faulted"
+                            },
+                            {
+                              "input": true,
+                              "output": "Running"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "location": "top",
+                    "style": {
+                      "classes": "text/title"
+                    },
+                    "text": "Pump_status"
+                  },
+                  "value": {
+                    "style": {
+                      "classes": "text/Data"
+                    }
+                  }
+                },
+                "type": "ia.symbol.pump"
+              },
+              {
+                "meta": {
+                  "name": "Valve"
+                },
+                "position": {
+                  "basis": "180px"
+                },
+                "propConfig": {
+                  "props.value.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "station_num": "{view.params.station_num}"
+                        },
+                        "tagPath": "[Simulator_tags_provider]Station_{station_num}/valve_flow"
+                      },
+                      "transforms": [
+                        {
+                          "formatType": "numeric",
+                          "formatValue": "###.## \u0027GPM\u0027",
+                          "type": "format"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "location": "top",
+                    "style": {
+                      "classes": "text/title",
+                      "marginTop": 10
+                    },
+                    "text": "Valve_flow"
+                  },
+                  "value": {
+                    "style": {
+                      "classes": "text/Data"
+                    }
+                  }
+                },
+                "type": "ia.symbol.valve"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "basis": "274px"
+        },
+        "propConfig": {
+          "props.filters.active.conditions.source": {
+            "binding": {
+              "config": {
+                "expression": "\"*station_\"+{view.params.station_num}+\"*\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "filters": {
+            "active": {
+              "conditions": {}
+            }
+          },
+          "toolbar": {
+            "enabled": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

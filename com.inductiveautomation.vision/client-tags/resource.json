@@ -1,0 +1,16 @@
+{
+  "scope": "C",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "data.bin"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "Ahmed_Ezzat",
+      "timestamp": "2025-01-29T12:49:44Z"
+    },
+    "lastModificationSignature": "d8c3471e248ebde27a474b1bae0f417c75580ae338adce156db957cda9317f52"
+  }
+}

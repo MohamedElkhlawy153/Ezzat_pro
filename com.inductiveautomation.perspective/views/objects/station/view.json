@@ -1,0 +1,118 @@
+{
+  "custom": {},
+  "params": {
+    "Station_num": 1
+  },
+  "propConfig": {
+    "params.Station_num": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 400,
+      "width": 400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "title"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "concat(\"Station_\",{view.params.Station_num})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "text/title"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "fault"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Station_num": "{view.params.Station_num}"
+                },
+                "tagPath": "[Simulator_tags_provider]Station_{Station_num}/pump_fault"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "text/Alarms"
+          },
+          "text": "Pump_fault"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Vessel"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.value.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Station_num": "{view.params.Station_num}"
+                },
+                "tagPath": "[Simulator_tags_provider]Station_{Station_num}/tank_capacity"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "text": ""
+          },
+          "value": {
+            "style": {
+              "classes": "text/Data"
+            }
+          }
+        },
+        "type": "ia.symbol.vessel"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}
