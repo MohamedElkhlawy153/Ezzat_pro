@@ -8,7 +8,7 @@ COPY . /Project
 WORKDIR /Project
 
 # تثبيت Ignition Gateway (استبدل الرابط بالإصدار المناسب)
-RUN wget https://files.inductiveautomation.com/release/ia/8.1.30/20230217-1311/ignition-gateway-8.1.30.zip \
+RUN  curl -O https://files.inductiveautomation.com/release/ia/8.1.30/20230217-1311/ignition-gateway-8.1.30.zip \
     && unzip ignition-gateway-8.1.30.zip \
     && rm ignition-gateway-8.1.30.zip
 
